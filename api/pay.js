@@ -1,6 +1,6 @@
 // api/pay.js
 const { APIContracts, APIControllers } = require('authorizenet');
-
+var SDKConstants = require('authorizenet').Constants;
 module.exports = async (req, res) => {
     if (req.method !== 'POST') {
         return res.status(405).json({ error: 'Method Not Allowed' });
@@ -42,6 +42,7 @@ module.exports = async (req, res) => {
         ctrl.execute(() => {
             const apiResponse = ctrl.getResponse();
             const response = new APIContracts.CreateTransactionResponse(apiResponse);
+            console.log(response);
 
             if (response != null && response.getMessages().getResultCode() === APIContracts.MessageTypeEnum.OK) {
                 res.status(200).json({ success: true, message: 'Payment successful!' });
