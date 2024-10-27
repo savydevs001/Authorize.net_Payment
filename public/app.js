@@ -33,10 +33,12 @@ document.getElementById('payButton').addEventListener('click', function() {
     // }
     if (!validateExpDate(expDate)){
         document.getElementById('successMessage').textContent = 'Invalid Expiration Date';
+        document.getElementById('successMessage').style.color = 'red';
         return;
     }
     if (!validateCVV(cvv)){
         document.getElementById('successMessage').textContent = 'Invalid CVV';
+        document.getElementById('successMessage').style.color = 'red';
         return;
     }
 
@@ -62,8 +64,10 @@ document.getElementById('payButton').addEventListener('click', function() {
         console.log(data.req);
         if (data.success) {
             document.getElementById('successMessage').textContent = 'Payment successful!';
+            document.getElementById('successMessage').style.color = 'green';
         } else {
             document.getElementById('successMessage').textContent = 'Payment failed!';
+            document.getElementById('successMessage').style.color = 'red';
         }
     })
     .catch(err => {
