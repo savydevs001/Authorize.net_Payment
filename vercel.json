@@ -7,7 +7,6 @@
   },
   "rewrites": [
     {
-      
       "source": "/pay",
       "destination": "/api/pay"
     }
