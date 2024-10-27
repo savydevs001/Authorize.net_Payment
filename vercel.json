@@ -1,0 +1,15 @@
+// vercel.json
+{
+  "build": {
+    "env": {
+      "AUTHORIZE_API_LOGIN_ID": "@authorize_api_login_id",
+      "AUTHORIZE_TRANSACTION_KEY": "@authorize_transaction_key"
+    }
+  },
+  "rewrites": [
+    {
+      "source": "/pay",
+      "destination": "/api/pay"
+    }
+  ]
+}

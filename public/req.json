@@ -1,0 +1,20 @@
+{
+    "createTransactionRequest": {
+        "merchantAuthentication": {
+            "name": "347TBkuZ",
+            "transactionKey": "44Q2Upt2Vu25E9wm"
+        },
+        "clientId": "sdk-node-1.0.9",
+        "transactionRequest": {
+            "transactionType": "authCaptureTransaction",
+            "amount": "0.4",
+            "payment": {
+                "creditCard": {
+                    "cardNumber": "4263702830419219",
+                    "expirationDate": "0626",
+                    "cardCode": "716"
+                }
+            }
+        }
+    }
+}

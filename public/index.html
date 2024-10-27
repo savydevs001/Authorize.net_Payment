@@ -1,0 +1,39 @@
+<!-- public/index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <!-- First Column for Amount -->
+        <div class="column">
+            <h2>Enter Amount</h2>
+            <input type="number" id="amount" placeholder="Amount" min="1" step="any" required>
+            <p class="error" id="amountError"></p>
+            <button id="submitAmount">OK</button>
+        </div>
+
+        <!-- Second Column for Payment Details -->
+        <div class="column" id="paymentForm" style="display: none;">
+            <h2>Pay</h2>
+            <input type="text" id="cardNumber" placeholder="Card Number" maxlength="19" required>
+            <p class="error" id="cardError"></p>
+
+            <input type="text" id="expDate" placeholder="Expiration Date (MMYY)" maxlength="4" required>
+            <p class="error" id="expDateError"></p>
+
+            <input type="text" id="cvv" placeholder="CVV" maxlength="4" required>
+            <p class="error" id="cvvError"></p>
+
+            <button id="payButton">Pay</button>
+            <p class="success" id="successMessage"></p>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
